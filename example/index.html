@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky</title>
+  <style>
+    body {
+      margin-top: 100px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .left,
+    .right {
+      float: left;
+    }
+
+    .left {
+      width: 30%;
+    }
+
+    .right {
+      width: 60%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left" data-sticky data-sticky-container=".container" data-sticky-offset="-50" data-sticky-sticky="sticky">
+      <img src="https://via.placeholder.com/150" alt=""/>
+    </div>
+
+    <div class="right">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie nulla eget ipsum pellentesque pretium eu eget arcu. Morbi vel augue facilisis, pharetra diam in, finibus velit. Suspendisse ante sapien, tincidunt id metus et, bibendum pretium arcu. Maecenas gravida elementum odio a luctus. Suspendisse a lectus ac enim tempor faucibus sit amet non metus. Aenean odio nulla, aliquet sed sagittis at, tempor vitae libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla id dignissim nisi. Nullam pharetra leo a mauris semper consequat. Mauris molestie, nunc non consequat consequat, tellus augue pulvinar tellus, a ultrices enim nisl sit amet nisi. Integer id molestie est, et congue nulla. Donec tristique neque sagittis odio fermentum, eu ullamcorper lorem mattis. Nullam luctus interdum luctus.</p>
+      <p>Integer iaculis laoreet risus et varius. Maecenas condimentum euismod lectus, in dictum libero fringilla sed. Sed malesuada odio at ante sagittis luctus. Donec mollis justo quis nibh egestas, eu lacinia ligula rhoncus. Etiam in dapibus quam. Maecenas molestie dapibus felis, in tincidunt nibh suscipit eget. Praesent luctus ornare dui vitae faucibus. Cras rhoncus luctus leo, eget tempus nunc malesuada vel.</p>
+      <p>Donec tortor turpis, pellentesque a eleifend sed, ultricies non enim. Morbi sagittis condimentum venenatis. Nam id tincidunt neque, ut tempor nunc. Vestibulum tincidunt nisl massa, nec vehicula arcu scelerisque vel. Curabitur tincidunt ullamcorper porttitor. Duis est libero, aliquet vel magna sit amet, facilisis pulvinar orci. Curabitur eget justo porttitor, suscipit sem eget, rhoncus tortor.</p>
+      <p>Pellentesque purus ante, consequat at odio id, posuere malesuada justo. Ut consectetur purus nec nibh consequat ornare. Curabitur volutpat libero sit amet enim dictum ullamcorper. Quisque egestas justo at neque egestas, vitae semper ligula convallis. Aliquam mollis urna consequat egestas congue. Proin id felis vel magna tempor pretium non vel tortor. Nam quis elit vitae lorem imperdiet gravida eu fringilla lectus. Vestibulum ac metus a purus fringilla venenatis. Pellentesque eu lectus ac turpis venenatis posuere non ut sem. Nam euismod ante at dolor cursus ornare.</p>
+      <p>Maecenas eleifend bibendum enim quis eleifend. Vestibulum eget vehicula erat. Vestibulum mollis nec augue non varius. Mauris sapien nisi, pretium eu nibh eu, accumsan facilisis augue. Proin id pharetra velit. Pellentesque sodales tempus felis at feugiat. Cras ornare ex fringilla dui malesuada porta. Vivamus facilisis lacinia imperdiet. Nam consequat mauris bibendum quam tempor, vel congue mi porta. Praesent eleifend quam sed malesuada auctor. Integer ac aliquam massa, ut auctor felis.</p>
+      <p>Curabitur a egestas tellus. Phasellus iaculis massa sed mattis convallis. Vivamus egestas mi vitae dui iaculis, vel condimentum risus semper. Vivamus ultrices, turpis vitae pretium ultricies, leo est vestibulum nisl, viverra maximus lectus elit ut augue. Aliquam erat volutpat. Nullam ultrices mi non ligula imperdiet, sed facilisis turpis imperdiet. Maecenas sed leo pharetra, egestas metus non, tincidunt est. Maecenas rhoncus lacus elit, a elementum neque rutrum at. Donec volutpat nisi sed nisl feugiat vulputate. Nam in felis dui.</p>
+      <p>Suspendisse at est id purus lacinia eleifend at eu dui. Duis efficitur tristique gravida. Nulla pellentesque neque nulla. Nam cursus vitae sem eu ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in maximus tortor, at venenatis odio. Integer vel turpis nec dui euismod ullamcorper id vitae mi. Nam ac erat eu quam sagittis bibendum quis commodo massa. Nunc hendrerit tortor vel quam porttitor cursus. Fusce est tortor, facilisis eget dapibus in, lacinia id eros. Nullam cursus ante quis risus efficitur, sit amet dictum purus aliquet. Nam faucibus eleifend leo, ac maximus justo vulputate eget. Fusce blandit ante ac magna pellentesque posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ac mollis risus. Vestibulum sagittis luctus elementum.</p>
+      <p>Ut tempor molestie metus, eget scelerisque justo hendrerit non. Quisque euismod urna porta, auctor odio eu, fermentum diam. Nulla a iaculis urna. Sed consequat tellus eget condimentum condimentum. Sed elit tortor, auctor nec magna at, consequat fringilla erat. Sed enim massa, lobortis sit amet luctus id, congue in nulla. In iaculis, neque ut volutpat sodales, tellus tellus dignissim lectus, nec laoreet felis nunc ut ante. Cras auctor lacus sed arcu facilisis ornare.</p>
+      <p>Phasellus ornare ex vitae odio vulputate, non consequat sem auctor. Integer a dapibus orci. Ut non placerat elit, ac sodales velit. Fusce pellentesque magna tellus, non vehicula felis suscipit id. Ut ornare dolor quis elit vehicula, vitae facilisis eros gravida. Etiam lacinia consequat ex ac dictum. Sed volutpat ex vel nunc blandit ullamcorper. Sed erat leo, ullamcorper ut mollis fermentum, luctus ut mauris. Fusce efficitur sem sit amet sodales vulputate. Morbi id aliquam lacus, eu tempus nisi. Duis ultrices, elit ac consectetur hendrerit, nunc ligula luctus ex, vitae fringilla diam nibh accumsan lectus. Mauris interdum, leo eget sodales scelerisque, turpis dolor placerat diam, eget porttitor felis justo id felis. Proin venenatis enim in massa cursus dictum. Nunc dictum commodo molestie. Integer eget lobortis eros, at laoreet nunc. Cras sed augue ac diam egestas auctor.</p>
+      <p>Vivamus lobortis arcu eu fringilla molestie. Sed ac ex venenatis, imperdiet purus a, suscipit nunc. Fusce nec libero et sapien faucibus volutpat quis at nisi. Duis maximus et lorem eu dapibus. Phasellus dictum dolor in risus semper scelerisque. Curabitur vehicula sagittis gravida. Donec et urna vehicula, fermentum velit a, varius diam. Vestibulum dignissim vitae mi ullamcorper pulvinar. Nullam nec molestie eros, ac efficitur lorem. Aliquam et dui ornare, hendrerit lectus eu, vulputate ante. Mauris sodales tempor semper. Ut pretium blandit ex non pretium. Etiam dignissim interdum libero, a porta tortor. Fusce pellentesque auctor ipsum vitae commodo. Morbi elementum rutrum leo, vel suscipit odio volutpat dictum. Integer accumsan sollicitudin dolor.</p>
+    </div>
+  </div>
+
+  <script src="../dist/sticky.bundle.js"></script>
+</body>
+</html>
