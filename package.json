@@ -1,0 +1,73 @@
+{
+  "name": "sticky",
+  "version": "1.0.0",
+  "description": "Sticky elements",
+  "main": "sticky.js",
+  "module": "dist/sticky.js",
+  "scripts": {
+    "start": "scriptkit",
+    "build": "scriptkit build",
+    "dev": "scriptkit dev",
+    "pretest": "scriptkit build",
+    "prepublishOnly": "scriptkit",
+    "test": "cat test/sticky.test.dist.js | tape-run --static . --browser phantomjs --render tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/sticky.git"
+  },
+  "keywords": [
+    "sticky",
+    "scroll",
+    "follow"
+  ],
+  "author": "First+Third <code@firstandthird.com> (http://firstandthird.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/sticky/issues"
+  },
+  "homepage": "https://github.com/firstandthird/sticky#readme",
+  "dependencies": {
+    "domassist": "^2.2.0",
+    "tinybounce": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-firstandthird": "^5.0.0",
+    "eslint-plugin-compat": "^3.7.0",
+    "eslint-plugin-import": "^2.21.2",
+    "phantomjs-prebuilt": "^2.1.16",
+    "scriptkit": "^3.0.0",
+    "static-server": "^2.2.1",
+    "tap-spec": "^5.0.0",
+    "tape-rollup": "^4.6.4",
+    "tape-run": "^7.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": "firstandthird",
+    "plugins": [
+      "compat"
+    ],
+    "rules": {
+      "compat/compat": 2
+    }
+  },
+  "scriptkit": {
+    "serve": {
+      "enabled": true
+    },
+    "files": {
+      "dist/sticky.js": "sticky.js",
+      "test/sticky.test.dist.js": "test/sticky.test.js"
+    },
+    "scripts": {
+      "babel": {
+        "exclude": [
+          "node_modules/tape-rollup/*"
+        ]
+      }
+    }
+  }
+}
