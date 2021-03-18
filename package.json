@@ -8,7 +8,7 @@
   "esmodule": "dist/sticky.modern.js",
   "scripts": {
     "build": "microbundle",
-    "dev": "concurrently 'microbundle watch' 'serve'",
+    "dev": "concurrently 'microbundle watch --external none' 'serve'",
     "test": "jest --coverage",
     "pretest": "microbundle",
     "prepublishOnly": "npm run lint && npm run test && microbundle",
