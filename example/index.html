@@ -82,5 +82,15 @@
   </div>
 
   <script src="../dist/sticky.js"></script>
+
+  <script>
+    window.addEventListener('sticky:enter', function(target) {
+      console.log(target);
+    })
+
+    window.addEventListener('sticky:leave', function(source) {
+      console.log(source);
+    })
+  </script>
 </body>
 </html>

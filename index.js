@@ -9,7 +9,7 @@ const Events = {
 
 class Sticky {
   constructor(el, options = {}) {
-    this.el = el;
+    this.el = findOne(el);
 
     const {
       stickyOffset: offset,
