@@ -32,7 +32,7 @@
   <div class="container">
     <aside>
       <div data-sticky data-sticky-offset="-50" data-sticky-target="section">
-        <img src="https://via.placeholder.com/150" alt=""/>
+        <h2>Lorem ipsum</h2>
       </div>
     </aside>
 
@@ -84,8 +84,10 @@
   <script src="../dist/sticky.js"></script>
 
   <script>
+    const el = document.querySelector('[data-sticky] h2');
+
     window.addEventListener('sticky:enter', function(target) {
-      console.log(target);
+      el.textContent = target.detail.querySelector('h2').textContent;
     })
 
     window.addEventListener('sticky:leave', function(source) {

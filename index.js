@@ -48,12 +48,13 @@ class Sticky {
   }
 
   init() {
+    this.calcBounds();
+
     if ('IntersectionObserver' in window) {
       // eslint-disable-next-line compat/compat
       this.observer = new IntersectionObserver(this.onIntersect.bind(this));
       this.observer.observe(this.el);
     } else {
-      this.calcBounds();
       this.addListeners();
     }
   }
@@ -134,13 +135,13 @@ class Sticky {
       return;
     }
 
-    const [{ el: targetEl }] = this.targets.filter(target => scrollTop >= target.top).slice(-1);
+    const [targetEl] = this.targets.filter(target => scrollTop >= target.top).slice(-1);
 
-    if (targetEl && targetEl !== this.current) {
+    if (targetEl && targetEl.el !== this.current) {
       fire(this.el, Events.Leave, { detail: this.current });
-      fire(this.el, Events.Enter, { detail: targetEl });
+      fire(this.el, Events.Enter, { detail: targetEl.el });
 
-      this.current = targetEl;
+      this.current = targetEl.el;
 
       this.inView({ el: this.el, target: this.current });
     }
@@ -149,12 +150,11 @@ class Sticky {
   /**
    * On intersect handler
    *
-   * @param {array} entries Ofserved items
+   * @param {array} entries Observed items
    */
   onIntersect(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        this.calcBounds();
         this.addListeners();
       } else {
         this.destroyListeners();
@@ -165,9 +165,10 @@ class Sticky {
   /**
    * Called upon element it's visible
    *
+   * @interface
    * @param {HTMLElement} element Current target element
    */
-  inView(element) {}
+  inView() {}
 
   /**
    * Calculate element boundaries
@@ -206,8 +207,6 @@ const init = () => {
   const instances = [];
 
   elements.forEach(element => instances.push(new Sticky(element)));
-
-  on('img[data-scroll]', 'load', () => fire(window, 'resize'));
 };
 
 if (document.readyState !== 'complete') {
