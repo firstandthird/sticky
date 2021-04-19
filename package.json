@@ -11,8 +11,8 @@
     "dev": "concurrently 'microbundle watch --external none' 'serve'",
     "test": "jest --coverage",
     "pretest": "microbundle --external none",
-    "prepublishOnly": "npm run lint && npm run test && microbundle",
-    "lint": "eslint index.js ./test"
+    "prepublishOnly": "npm run lint && microbundle",
+    "lint": "eslint index.js"
   },
   "repository": {
     "type": "git",
