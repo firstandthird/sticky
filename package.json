@@ -10,7 +10,7 @@
     "build": "microbundle",
     "dev": "concurrently 'microbundle watch --external none' 'serve'",
     "test": "jest --coverage",
-    "pretest": "microbundle",
+    "pretest": "microbundle --external none",
     "prepublishOnly": "npm run lint && npm run test && microbundle",
     "lint": "eslint index.js ./test"
   },

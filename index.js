@@ -45,6 +45,8 @@ class Sticky {
     this.resizeHandler = tinybounce(this.onResize.bind(this), 150);
 
     this.init();
+
+    return this.el;
   }
 
   init() {
@@ -219,3 +221,5 @@ if (document.readyState !== 'complete') {
 }
 
 ready(init);
+
+export { Events, Sticky };
