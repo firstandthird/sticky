@@ -1,6 +1,6 @@
 {
   "name": "@firstandthird/sticky",
-  "version": "1.0.1-beta.0",
+  "version": "1.0.1-beta.1",
   "description": "Sticky elements",
   "source": "index.js",
   "main": "dist/sticky.js",
