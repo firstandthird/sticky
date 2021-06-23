@@ -51,9 +51,6 @@
     },
     "scripts": {
       "babel": {
-        "exclude": [
-          "node_modules/tape-rollup/*"
-        ]
       }
     }
   }
