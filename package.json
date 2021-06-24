@@ -1,6 +1,6 @@
 {
   "name": "@firstandthird/sticky",
-  "version": "1.0.1-beta.1",
+  "version": "2.0.0",
   "description": "Sticky elements",
   "main": "index.js",
   "module": "dist/sticky.bundle.js",
@@ -50,8 +50,7 @@
       "dist/sticky.js": "index.js"
     },
     "scripts": {
-      "babel": {
-      }
+      "babel": {}
     }
   }
 }
